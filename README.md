@@ -8,7 +8,7 @@ nm -g target/debug/nmrd | cargo run | less
 
 [![Build Status](https://travis-ci.org/king6cong/nmrd.svg?branch=master)](https://travis-ci.org/alexcrichton/rustc-demangle)
 
-[Documentation](http://alexcrichton.com/rustc-demangle)
+[Documentation](https://github.com/king6cong/nmrd)
 
 # License
 
