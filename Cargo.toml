@@ -1,0 +1,7 @@
+[package]
+name = "nmrd"
+version = "0.1.0"
+authors = ["king6cong <king6cong@gmail.com>"]
+
+[dependencies]
+rustc-demangle = "0.1"
