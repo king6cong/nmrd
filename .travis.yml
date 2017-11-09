@@ -1,20 +1,21 @@
 language: rust
 rust:
-  - stable
-  - beta
-  - nightly
+- stable
+- beta
+- nightly
 sudo: false
 before_script:
-  - pip install 'travis-cargo<0.2' --user && export PATH=$HOME/.local/bin:$PATH
+- pip install 'travis-cargo<0.2' --user && export PATH=$HOME/.local/bin:$PATH
 script:
-  - cargo build
-  - cargo test
-  - cargo doc
+- cargo build
+- cargo test
+- cargo doc
 after_success:
-  - travis-cargo --only nightly doc-upload
+- travis-cargo --only nightly doc-upload
 notifications:
   email:
     on_success: never
 env:
   global:
-    secure: "VWE8DaftZLOj34USRPiq2jyFV1xWrPJP0lgMVWPGF52soyWV6L5FyMlbk00GvKH8y5h0urtuVFmInsLKz1E96eTLbD7Efa2snjSlOWMsTaWy3yq0NNuPraMWiXUkjDBxW3DTV47HN9thYA7TbrM35A0XGr7fXKl4CPT/UKEo2nNZPb2Y2XYaD6RID1sXMOvemOERGu7Lnq8dQ/PdGWWkpTV4FVsmq2wTyyZnzsEFsK0r/wqEPPHSl8r3NH6Rid9kCMw3h1d9s1eYSqzP09/fYfjy+X/6iGV9dL5WUQFL7xG7WjfZZG/e87lAxbXx+jXTlncdvXjm4BmIOYHeEMK9N5D3qE5C1gIIU+tk6ZuVKBLWMQJnAIDJKCsVdUhAXtWqbFK4djvNJUml1rIOF/CVUeynBVtacJ8nlxyh61XvDHbZGSBFBR2odEkhUaLzw/t/zqOIYd0u+mjtM4pX1nZ+ZFIMqVFsNTfVWWMDLyRVBNiAoHCdn/ug+mJJaYE3mZ2q1wPPqJVFffyaZVyg97zFO0y9v5ASHjb/7nYlIPoDGDPDUuoscuw5IYf+6CoCi7EgGqg5v7X1BsBXSYK+XfzOvrAqP31ixNGyVJEcBjAaJXwopx6KVIqWe71eHJDX68VeI0ncfCPDDQIReKA7MBhq5PzRDzr4iRHZAhNyuKgo+Fo="
+  - secure: VWE8DaftZLOj34USRPiq2jyFV1xWrPJP0lgMVWPGF52soyWV6L5FyMlbk00GvKH8y5h0urtuVFmInsLKz1E96eTLbD7Efa2snjSlOWMsTaWy3yq0NNuPraMWiXUkjDBxW3DTV47HN9thYA7TbrM35A0XGr7fXKl4CPT/UKEo2nNZPb2Y2XYaD6RID1sXMOvemOERGu7Lnq8dQ/PdGWWkpTV4FVsmq2wTyyZnzsEFsK0r/wqEPPHSl8r3NH6Rid9kCMw3h1d9s1eYSqzP09/fYfjy+X/6iGV9dL5WUQFL7xG7WjfZZG/e87lAxbXx+jXTlncdvXjm4BmIOYHeEMK9N5D3qE5C1gIIU+tk6ZuVKBLWMQJnAIDJKCsVdUhAXtWqbFK4djvNJUml1rIOF/CVUeynBVtacJ8nlxyh61XvDHbZGSBFBR2odEkhUaLzw/t/zqOIYd0u+mjtM4pX1nZ+ZFIMqVFsNTfVWWMDLyRVBNiAoHCdn/ug+mJJaYE3mZ2q1wPPqJVFffyaZVyg97zFO0y9v5ASHjb/7nYlIPoDGDPDUuoscuw5IYf+6CoCi7EgGqg5v7X1BsBXSYK+XfzOvrAqP31ixNGyVJEcBjAaJXwopx6KVIqWe71eHJDX68VeI0ncfCPDDQIReKA7MBhq5PzRDzr4iRHZAhNyuKgo+Fo=
+  - secure: XFVimrlFPvKmvsGBDKtgKosxuYjpUqoIcCIHGE+KB+72It0vDEzs04PvDm2YdmzA82y6pMo3Arsle7eg05ldZDJL7AII34kJ3JeCciVrMgqO16DXPvLJVSA3KPVgpgql2Ym/Vo6u42v1PTfHL7aHNPvnucAxYmd5Ktu3jDMQ89gTEV21DLs4cMWZeGTs/XO+nGbNTWLAE7en9gMMBF2yU0tW8slZRh3aEtKIHnloMppl9QOyqtmsak5NNhka3V8qDn8AMr/9lWQzyv1Y/zm6f5rXhPWBxibeM78NkBoltLA2RSoVd7L0oXgUEXZIWAV3KnPX8WKvZWRWIVx7xn9QrGl1fqmtKUiDHC8n1j1GzCT1S2TnH6uhdXK/OYdsTP6JqZdu/o73qsMrxggjfQiUMn+hVSz2atGrZFf9H2P8tM23lSUzfD5CpP4REwZ7Xomjnbl3mDCHpmSBd5ItTGc2ZLgsD4biVnrCRRPgjQRadiiyhdC9cnt+KEIz5gtxY7sRKPa97M6ib3aihMIEzTh+7yc4t3m3mvOfRIYo2/278FYKMGMcwwtuGEIwNn6asJVrNoKRKproThXvtpng4eFxqBaD6Y1K13EOH/A6FlHgE3uB169389g554AXSVmHVIanrZPmAe0jiqqHiPYMOw8FGyGdgwaijbUKvzkFDc5BA54=
